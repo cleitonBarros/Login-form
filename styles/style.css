@@ -3,15 +3,11 @@
     margin: 0;
     box-sizing: border-box;
     overflow-y: hidden;
+    overflow-x: hidden;
+    
 
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
-/*
-
-font-family: 'Poppins', sans-serif;
-font-family: 'Roboto', sans-serif
-*/
-
 :root {
     --text-base: #afb6c2;
     --text-title: #d4ccb6;
@@ -25,19 +21,23 @@ body{
     display: flex; 
     background: var( --background)
 }
+
+/*logo header*/
 header{
     width: 80%;
     display: flex;
-    
-
 }
 header nav{
     align-items: flex-start;
 }
+header nav img{
+    width: 150px;
+}
+/*Main*/
 
 main{
-   min-width: 500px;
-    width: 55%;
+    min-width: 590px;
+    width: 50%;
     display: flex;
     flex-direction: column; 
     align-items: center;
@@ -45,9 +45,9 @@ main{
 }
 
 main .container{
-    min-width: 500px;
+   
     background: var(  --form-background);
-    width: 520px;
+    width: 500px;
     height:500px;
     border-radius: 4px;
     display: flex;
@@ -59,9 +59,15 @@ main .container .content {
 
     height: 380px;
     width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
    
   
 }
+
+/*Form-titles*/
 .content  .title{
     display: flex;
     margin-bottom: 5px;
@@ -69,6 +75,7 @@ main .container .content {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
     font-weight:600;
+    
 }
 .content .title p{
     color:var(--text-title);
@@ -79,6 +86,7 @@ main .container .content {
 }
 .content .title-up{
     margin-bottom: 20px;
+    margin-left:-50px
 
 }
 .content .title-up span{
@@ -102,31 +110,42 @@ main .container .content {
 .content p a:hover{
     text-decoration: underline
 }
+/*Form-Inputs*/
 .form{
     
     display: flex;
     flex-direction: column;
     justify-content:center;
 
-    width: 350px;
+    width: 340px;
 }
 .form .mail{
     position: relative;
-    width:25px;
-    top: -34px;
-    left: 5px;
+    width:22px;
+    top: -32px;
+    left: 10px;
+}
+.mail:focus-within {
+    filter: invert(82%) sepia(58%) saturate(2146%) hue-rotate(333deg) brightness(112%) contrast(104%);
 }
 .form .password{
     position: relative;
-    width:25px;
-    top: -38px;
-    left: 5px;
+    width:22px;
+    top: -35px;
+    left: 10px;
 }
-.form .password-view{
+.password:focus-within  {
+    fill: var(--primary-color);
+    stroke: var(--primary-color);
+    filter: invert(82%) sepia(58%) saturate(2146%) hue-rotate(333deg) brightness(112%) contrast(104%);
+}
+.form .password-view {
     position: relative;
-    width:25px;
-    top: -60px;
-    left: 315px;
+    width:22px;
+    top: -55px;
+    left: 305px;
+    cursor: pointer;
+   
    
 }
 .form .label{
@@ -138,23 +157,29 @@ main .container .content {
 
 
 }
+.form input[type="password"],
 .form input[type="text"]{
     border: 1px solid var(--text-base);
     border-radius: 5px;
     background: none;
-    width: 350px;
     height:44px;
-  
+    color: var(--text-base);
     padding-left: 40px;
     
 }
+.form input[type="password"]:focus-within,
+.form input[type="text"]:focus-within {
+    border: 1px solid var(--primary-color);
+    outline-color: var(--primary-color);
+  }
 .form .checkbox{
     display: flex;
     flex-direction: row;
     justify-content:space-between;
-    width: 350px;
+    width: 100%;
     align-items:center;
     margin-bottom:20px;
+    margin-top:-20px;
     
 }
 .form .checkbox .box{
@@ -164,6 +189,9 @@ display: flex;
 align-items: center;
 
     
+}
+.form .checkbox .box input[type="checkbox"]:checked{
+    color: var(--primary-color)
 }
 .form .checkbox .box label{
     
@@ -204,12 +232,39 @@ button:hover{
     transform:translateY(2%);
  
 }
-
+/*img aside*/
 aside{
-    width: 45%;
+    width: 50%;
+   min-width: 500px;
 }
 
-aside  img{
+.banner{
+    background-image: url('../images/side-image.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    filter:  saturate(190%)
+
+}
+
+/*scrren*/
+@media(max-width: 1024px) {
+    .banner {
+      display: none;
+    }
+   body{
+       justify-content:center;
+   }
+   main{
     width: 100%;
-    height: 100%;
+   }
+   
+}
+@media(max-width: 650px){  
+     main .container{  
+        width: 400px;
+        
+     }
+   
+
 }

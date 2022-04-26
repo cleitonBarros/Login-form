@@ -5,26 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style.css">
-    <title>Document</title>
+    <title>Camp.In</title>
 </head>
 <body>
-    <!--<header>
-        <nav>
-            <img src="../images/logo.svg" alt="icon">
-        </nav>
-    </header>-->
-    
-
         <main>
-        
-
                 <header>
                     <nav>
                         <img src="../images/logo.svg" alt="icon">
                     </nav>
                 </header>
-           
-    
             <div class="container">
                 <div class="content">
                     <div class="title-up">
@@ -36,38 +25,40 @@
                     </div>
                     <form class="form">
                        
-
+                            <!--email-->
                             <label class="label">E-mail</label>
                             <input type="text" placeholder="Digite seu Email">
-                            <img class="mail" src="../images/mail.svg" alt="">
+                            <img class="mail" src="../images/mail.svg" alt="icon email" id="email">
+
+                            <!--senha-->
                             <label class="label" >Senha</label>
-                            <input type="text" placeholder="Digite sua senha">
-                            <img class="password" src="../images/lock.svg" alt="icon lock">
-                            <img class="password-view" src="../images/eye.svg" alt="icon eyes">
-                      
-    
-                        <div class="checkbox">
+                            <input type="password" placeholder="Digite sua senha" id="senha">
+                            <img class="password" src="../images/lock.svg" alt="icon lock" id="lock">
+                            <img class="password-view" src="../images/eye.svg" alt="icon eyes" id="seePassword">
+                        
+                            <div class="checkbox">
                             <div class="box">
-                               <input type="checkbox">
-                                <label >Lembre-me</label>
+                               <input type="checkbox" name="checkbox" id="checkbox">
+                                <label for="checkbox" >Lembre-me</label>
                             </div>
-    
                             <a href="#">Esqueci minha senha</a>
-                        </div>
+                            </div>
     
                         <button type="submit">Entrar</button>
     
                     </form>
-                    <p>Não tem um conta? <a href="#">Registre-se</a></p>
+                    <p>Não tem uma conta?  <a href="#"> Registre-se</a></p>
                     
                 </div>
             </div>
         </main>
     
         <aside class="banner">
-            <img src="../images/side-image-2x.jpg" alt="">
+           <!--]
+             <img src="../images/side-image-2x.jpg" alt="">
+           -->
     </aside>
         
-
+<script src="../script/main.js"></script>
 </body>
 </html>
