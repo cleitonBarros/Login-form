@@ -125,28 +125,19 @@ main .container .content {
     top: -32px;
     left: 10px;
 }
-.mail:focus-within {
-    filter: invert(82%) sepia(58%) saturate(2146%) hue-rotate(333deg) brightness(112%) contrast(104%);
-}
+
 .form .password{
     position: relative;
     width:22px;
     top: -35px;
     left: 10px;
 }
-.password:focus-within  {
-    fill: var(--primary-color);
-    stroke: var(--primary-color);
-    filter: invert(82%) sepia(58%) saturate(2146%) hue-rotate(333deg) brightness(112%) contrast(104%);
-}
 .form .password-view {
     position: relative;
     width:22px;
     top: -55px;
     left: 305px;
-    cursor: pointer;
-   
-   
+    cursor: pointer; 
 }
 .form .label{
    
@@ -154,8 +145,6 @@ main .container .content {
     font-family: 'Poppins', sans-serif;
     margin-bottom:5px;
     font-weight: 400;
-
-
 }
 .form input[type="password"],
 .form input[type="text"]{
@@ -168,10 +157,17 @@ main .container .content {
     
 }
 .form input[type="password"]:focus-within,
-.form input[type="text"]:focus-within {
+.form input[type="text"]:focus-within{
     border: 1px solid var(--primary-color);
     outline-color: var(--primary-color);
-  }
+  
+}
+.form input[type="text"]:focus-within+.mail,
+.form input[type="password"]:focus-within+.password {
+    fill: var(--primary-color);
+    stroke:var(--primary-color);
+    filter: invert(82%) sepia(58%) saturate(500%) hue-rotate(333deg) brightness(112%) contrast(104%);
+}
 .form .checkbox{
     display: flex;
     flex-direction: row;

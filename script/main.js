@@ -1,5 +1,5 @@
 const senha  =  document.getElementById('senha');
-const view  = document.getElementById('seePassword')
+const view  = document.getElementById('password-view')
 
 
 view.addEventListener('click',( )=>{
@@ -9,7 +9,7 @@ view.addEventListener('click',( )=>{
     }
     else if(senha.type == 'text'){
         senha.type ='password'
-        view.src ='../images/eye-focus.svg'
+        view.src ='../images/eye-focus2.svg'
     }
     else return
 })
