@@ -162,12 +162,12 @@ main .container .content {
     outline-color: var(--primary-color);
   
 }
-.form input[type="text"]:focus-within+.mail,
+/*.form input[type="text"]:focus-within+.mail,
 .form input[type="password"]:focus-within+.password {
     fill: var(--primary-color);
     stroke:var(--primary-color);
     filter: invert(82%) sepia(58%) saturate(500%) hue-rotate(333deg) brightness(112%) contrast(104%);
-}
+}*/
 .form .checkbox{
     display: flex;
     flex-direction: row;
